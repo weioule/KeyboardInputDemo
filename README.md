@@ -3,6 +3,12 @@
 
 先上效果图：
 
+![image](https://github.com/weioule/KeyboardInputDemo/blob/master/app/img/img01.jpg) 　
+![image](https://github.com/weioule/KeyboardInputDemo/blob/master/app/img/img02.jpg) 　
+![image](https://github.com/weioule/KeyboardInputDemo/blob/master/app/img/img03.jpg) 　
+![image](https://github.com/weioule/KeyboardInputDemo/blob/master/app/img/img04.jpg) 　
+
+
 
 一 身份证键盘
   1 身份证键盘在MainActivity页面，使用时再布局中添加配置
