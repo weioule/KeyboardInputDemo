@@ -1,0 +1,11 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="key_height">45.0dip</dimen>
+    <dimen name="key_num_height">41.0dip</dimen>
+    <dimen name="key_top_margin">7.0dip</dimen>
+    <dimen name="key_size">16dp</dimen>
+    <dimen name="key_height_qwerty">37.0dip</dimen>
+
+    <dimen name="spacing_medium">4dp</dimen>
+
+</resources>

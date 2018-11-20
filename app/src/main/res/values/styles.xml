@@ -1,0 +1,69 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorAccent</item>
+        <item name="colorPrimaryDark">@color/colorAccent</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+    <declare-styleable name="custom">
+        <attr name="show_bottom_split" format="boolean" /> <!-- 是否显示分割线 -->
+        <attr name="show_pwd_eye" format="boolean" /> <!-- 是否显示小眼睛，用于切换密码的显示/隐藏状态 -->
+        <attr name="lable" format="string" />
+        <attr name="paddingleft_lable" format="dimension" />
+        <attr name="errNote" format="string" />
+        <attr name="hit" format="string" />
+        <attr name="input_typed" format="string" />
+        <attr name="length" format="integer" />
+        <attr name="clear" format="boolean" />
+        <attr name="left_text" format="string" /><!-- 给左边设置 字 -->
+        <attr name="right_btn" format="reference" />  <!-- 给右边button设置 背景 -->
+        <attr name="right_btn_text" format="string" /><!-- 给右边button设置 字 -->
+        <attr name="btn_right_bg" format="reference" /><!-- 给右边设置图片 -->
+        <attr name="btn_left_bg" format="reference" /><!-- 给左边设置图片 -->
+        <attr name="show_custom_keyboard" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="InputView">
+        <attr name="maxCount" format="integer" />
+        <attr name="circleColor" format="color" />
+        <attr name="bottomLineColor" format="color" />
+        <attr name="radius" format="dimension" />
+        <attr name="divideLineWidth" format="dimension" />
+        <attr name="divideLineColor" format="color" />
+        <attr name="rectAngle" format="dimension" />
+        <attr name="focusedColor" format="color" />
+        <attr name="psdType" format="enum">
+            <enum name="weChat" value="0" />
+            <enum name="bottomLine" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <!--支付密码输入框的样式与动画 *************************************************************** start -->
+    <style name="ActionSheetDialogStyle" parent="@android:style/Theme.Dialog">
+        <!-- 背景透明 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <!-- 浮于Activity之上 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 边框 -->
+        <item name="android:windowFrame">@null</item>
+        <!-- Dialog以外的区域模糊效果 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 无标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 半透明 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- Dialog进入及退出动画 -->
+        <item name="android:windowAnimationStyle">@style/ActionSheetDialogAnimation</item>
+    </style>
+    <!-- ActionSheet进出动画 -->
+    <style name="ActionSheetDialogAnimation" parent="@android:style/Animation.Dialog">
+        <item name="android:windowEnterAnimation">@anim/actionsheet_dialog_in</item>
+        <item name="android:windowExitAnimation">@anim/actionsheet_dialog_out</item>
+    </style>
+    <!--支付密码输入框的样式与动画 *************************************************************** end -->
+</resources>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:orientation="vertical">
+
+    <com.example.weioule.inputkeyboarddemo.view.CEditText
+        android:id="@+id/indentity_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:clear="true"
+        app:hit="请输入身份证号"
+        app:input_typed="email"
+        app:left_text="身份证号"
+        app:length="18"
+        app:show_bottom_split="false"
+        app:show_custom_keyboard="true"
+        tools:layout_height="60dp" />
+
+    <TextView
+        android:id="@+id/input_id_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/white_card_bg"
+        android:gravity="center"
+        android:padding="6dp"
+        android:textAppearance="@style/font_gray_6_16"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/ok_button"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/btn_bg"
+        android:gravity="center"
+        android:text="确认"
+        android:textAppearance="@style/font_white_16" />
+</LinearLayout>

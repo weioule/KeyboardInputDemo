@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="white">#ffffffff</color>
+    <color name="bg_gray">#F6F6F6</color>
+
+    <color name="gray_dbe6ee">#ffdbe6ee</color>
+    <color name="gray_d2d5db">#D2D5DB</color>
+    <color name="text_black">#4A4A4A</color>
+
+    <color name="bg_orange">#FD5E02</color>
+
+    <color name="kb_checked_bg_color">#fd6e5f</color>
+    <color name="kb_checked_bg_pressed_color">#fb5859</color>
+    <color name="transaction_category_style">#ffE01A38</color>
+    <color name="listview_refresh_text_color">#FFB5B5B5</color>
+</resources>

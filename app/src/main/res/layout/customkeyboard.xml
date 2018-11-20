@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/contentLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.example.weioule.inputkeyboarddemo.keyboard.CustomKeyboardView
+        android:id="@+id/cmbkeyboard_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/gray_d2d5db"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:keyBackground="@drawable/btn_keyboard_key"
+        android:keyTextColor="@android:color/black"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:shadowColor="@android:color/white"
+        android:shadowRadius="0.0" />
+
+</LinearLayout>

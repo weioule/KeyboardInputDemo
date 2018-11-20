@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="60dp"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:textAppearance="@style/font_gray_3_16"
+        tools:text="label" />
+
+    <RelativeLayout
+        android:id="@+id/input_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@id/label"
+        android:paddingLeft="10dp">
+
+        <Button
+            android:id="@+id/right_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            tools:text="btn"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/right_iamge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignWithParentIfMissing="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dip"
+            android:layout_toLeftOf="@id/right_btn"
+            android:gravity="center_vertical"
+            android:visibility="gone"
+            tools:src="@drawable/pwd_eye_open"
+            tools:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/clear_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignWithParentIfMissing="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dip"
+            android:layout_toLeftOf="@id/right_iamge"
+            android:background="@drawable/clear_btn"
+            android:visibility="gone"
+            tools:src="@drawable/clear_btn"
+            tools:visibility="visible" />
+
+        <com.example.weioule.inputkeyboarddemo.view.AsyncImageView
+            android:id="@+id/left_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            tools:src="@drawable/ic_launcher"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/left_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignWithParentIfMissing="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toRightOf="@+id/left_image"
+            android:visibility="gone"
+            tools:text="leftTxt"
+            tools:visibility="visible" />
+
+        <com.example.weioule.inputkeyboarddemo.view.CmbEditText
+            android:id="@+id/editText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="2dp"
+            android:layout_toLeftOf="@+id/clear_btn"
+            android:layout_toRightOf="@+id/left_textView"
+            android:background="@null"
+            android:textAppearance="@style/font_gray_3_16"
+            android:textColorHint="#dddddd"
+            android:textCursorDrawable="@null" />
+
+        <TextView
+            android:id="@+id/err_note"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/editText"
+            android:layout_below="@id/editText"
+            android:layout_marginTop="15dp"
+            android:textAppearance="@style/font_red_12"
+            android:visibility="gone"
+            tools:text="errNote"
+            tools:visibility="visible" />
+
+        <View
+            android:id="@+id/bottom_split_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignLeft="@+id/left_image"
+            android:layout_alignParentBottom="true"
+            android:background="@color/listview_refresh_text_color" />
+    </RelativeLayout>
+
+</RelativeLayout>
