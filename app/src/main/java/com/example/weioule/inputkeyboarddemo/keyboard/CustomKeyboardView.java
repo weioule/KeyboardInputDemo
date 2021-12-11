@@ -12,8 +12,8 @@ import android.inputmethodservice.Keyboard;
 import android.inputmethodservice.KeyboardView;
 import android.util.AttributeSet;
 
-
 import com.example.weioule.inputkeyboarddemo.R;
+import com.example.weioule.inputkeyboarddemo.util.IdCardUtil;
 
 import java.lang.reflect.Field;
 import java.util.List;
@@ -25,7 +25,7 @@ import java.util.List;
 public class CustomKeyboardView extends KeyboardView {
     // 用于区分左下角空白的按键
     public static final int KEYCODE_EMPTY = -10, KEYCODE_DOUBLE_ZORE = -11, KEYCODE_NUM_DELETE = -12;
-    private int KEY_PADDING_TOP = 15;
+    private int KEY_PADDING_TOP;
     private Context mContext;
 
     public CustomKeyboardView(Context context, AttributeSet attrs) {
@@ -39,6 +39,7 @@ public class CustomKeyboardView extends KeyboardView {
     }
 
     private void init(Context context) {
+        KEY_PADDING_TOP = IdCardUtil.dip2px(context, 5);
         mContext = context;
         setEnabled(true);
         // 设置按键没有点击放大镜显示的效果
@@ -122,14 +123,14 @@ public class CustomKeyboardView extends KeyboardView {
 
             // 获取删除图标绘制的坐标
             int left = key.x + (key.width - drawWidth) / 2;
-            int top = key.y + (key.height - drawHeight) / 2;
+            int top = KEY_PADDING_TOP + key.y + (key.height - drawHeight) / 2;
             mDeleteDrawRect = new Rect(left, top, left + drawWidth, top + drawHeight);
         }
 
         // 绘制删除的图标
         if (!mDeleteDrawRect.isEmpty()) {
-            drawable.setBounds(mDeleteDrawRect.left + 10, mDeleteDrawRect.top + 12,
-                    mDeleteDrawRect.right + 10, mDeleteDrawRect.bottom + 12);
+            drawable.setBounds(mDeleteDrawRect.left, mDeleteDrawRect.top,
+                    mDeleteDrawRect.right, mDeleteDrawRect.bottom);
             drawable.draw(canvas);
         }
     }
